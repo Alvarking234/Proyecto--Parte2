@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zIuDQiZ/h8U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\OneDrive\\Escritorio\\proye\\bicicleta\\bicicleta\\bicicleta.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.24.2-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.24.2-preview.1.nupkg.sha512"
+  ],
+  "logs": []
+}
