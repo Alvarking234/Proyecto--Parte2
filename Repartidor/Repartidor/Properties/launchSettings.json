@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Repartidor": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
