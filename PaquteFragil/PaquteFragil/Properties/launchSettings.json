@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PaquteFragil": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
