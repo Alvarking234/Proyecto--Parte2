@@ -1,7 +1,10 @@
-﻿List<Cliente> clientes = new List<Cliente>();
+﻿using GoXelaDelivery.app;
+
+List<Cliente> clientes = new List<Cliente>();
 List<Repartidor> repartidores = new List<Repartidor>();
 List<Vehiculo> vehiculos = new List<Vehiculo>();
 List<Paquete> paquetes = new List<Paquete>();
+List<Entrega> entregas = new List<Entrega>();
 int opcion;
 
 do
@@ -11,8 +14,8 @@ do
     Console.WriteLine("======================================");
     Console.WriteLine("       GOXELA DELIVERY");
     Console.WriteLine("======================================");
-    Console.WriteLine("1. Registrar cliente \n2. Consultar clientes \n3. Registrar repartidor \n4. Consultar repartidores \n5.Registrar Vehículos \n6. Consultar Vehículos \n7. Registrar Paquetes \n8. Consultar Paquetes \n0. Salir");
-    Console.WriteLine("");
+    Console.WriteLine("1. Registrar cliente \n2. Consultar clientes \n3. Registrar repartidor \n4. Consultar repartidores \n5.Registrar Vehículos \n6. Consultar Vehículos \n7. Registrar Paquetes \n8. Consultar Paquetes");
+    Console.WriteLine("9.Registrar entregas \n10. Consultar entregas\n0. Salir");
     Console.WriteLine("======================================");
     Console.Write("Seleccione una opción: ");
 
@@ -54,6 +57,13 @@ do
 
         case 8:
             ConsultarPaquetes();
+            break;
+        case 9:
+            RegistrarEntrega();
+            break;
+
+        case 10:
+            ConsultarEntregas();
             break;
         case 0:
             Console.WriteLine("Saliendo de GoXela Delivery...");
@@ -278,7 +288,7 @@ void RegistrarPaquete()
 
     int tipo = int.Parse(Console.ReadLine());
 
-    Console.Write("\nCódigo: ");
+    Console.Write("Código: ");
     int codigo = int.Parse(Console.ReadLine());
 
     Console.Write("Descripción: ");
@@ -334,7 +344,7 @@ void RegistrarPaquete()
             break;
 
         default:
-            Console.WriteLine("\nTipo de paquete inválido.");
+            Console.WriteLine("Tipo de paquete inválido.");
             Console.WriteLine("Presione ENTER para continuar...");
             Console.ReadLine();
             return;
@@ -342,7 +352,7 @@ void RegistrarPaquete()
 
     paquetes.Add(paquete);
 
-    Console.WriteLine("\nPaquete registrado correctamente.");
+    Console.WriteLine("Paquete registrado correctamente.");
     Console.WriteLine("Presione ENTER para continuar...");
     Console.ReadLine();
 }
@@ -351,7 +361,7 @@ void RegistrarPaquete()
 void ConsultarPaquetes()
 {
     Console.Clear();
-    Console.WriteLine("=== PAQUETES REGISTRADOS ===\n");
+    Console.WriteLine("=== PAQUETES REGISTRADOS ===");
 
     if (paquetes.Count == 0)
     {
@@ -374,6 +384,218 @@ void ConsultarPaquetes()
         }
     }
 
+    Console.WriteLine("Presione ENTER para continuar...");
+    Console.ReadLine();
+}
+void RegistrarEntrega()
+{
+    Console.Clear();
+
+    Console.WriteLine("======================================");
+    Console.WriteLine("        REGISTRAR ENTREGA");
+    Console.WriteLine("======================================");
+
+    if (clientes.Count == 0 || paquetes.Count == 0 ||
+        repartidores.Count == 0 || vehiculos.Count == 0)
+    {
+        Console.WriteLine("No se puede registrar la entrega. \nDebe existir al menos un cliente, paquete, repartidor y vehículo registrados.");
+        Console.WriteLine("Presione ENTER para continuar...");
+        Console.ReadLine();
+        return;
+    }
+
+    Console.Write("Código de la entrega: ");
+    int codigo = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("--- CLIENTES ---");
+
+    foreach (Cliente cliente in clientes)
+    {
+        Console.WriteLine(cliente.Codigo + " - " + cliente.Nombre);
+    }
+
+    Console.Write("Seleccione el código del cliente: ");
+    int codigoCliente = int.Parse(Console.ReadLine());
+
+    Cliente clienteSeleccionado = clientes.Find(c => c.Codigo == codigoCliente);
+
+    if (clienteSeleccionado == null)
+    {
+        Console.WriteLine("Cliente no encontrado.");
+        Console.ReadLine();
+        return;
+    }
+
+    Console.WriteLine("--- PAQUETES ---");
+
+    foreach (Paquete paquete in paquetes)
+    {
+        Console.WriteLine(
+            paquete.Codigo + " - " +
+            paquete.Descripcion + " - " +
+            paquete.Peso + " kg");
+    }
+
+    Console.Write("Seleccione el código del paquete: ");
+    int codigoPaquete = int.Parse(Console.ReadLine());
+
+    Paquete paqueteSeleccionado = paquetes.Find(p => p.Codigo == codigoPaquete);
+
+    if (paqueteSeleccionado == null)
+    {
+        Console.WriteLine("Paquete no encontrado.");
+        Console.ReadLine();
+        return;
+    }
+
+    Console.WriteLine("--- REPARTIDORES ---");
+
+    foreach (Repartidor repartidor in repartidores)
+    {
+        Console.WriteLine(
+            repartidor.Codigo + " - " +
+            repartidor.Nombre + " - " +
+            repartidor.Estado);
+    }
+
+    Console.Write("Seleccione el código del repartidor: ");
+    int codigoRepartidor = int.Parse(Console.ReadLine());
+
+    Repartidor repartidorSeleccionado =
+        repartidores.Find(r => r.Codigo == codigoRepartidor);
+
+    if (repartidorSeleccionado == null)
+    {
+        Console.WriteLine("Repartidor no encontrado.");
+        Console.ReadLine();
+        return;
+    }
+
+    if (repartidorSeleccionado.Estado != "Disponible")
+    {
+        Console.WriteLine("El repartidor no está disponible.");
+        Console.ReadLine();
+        return;
+    }
+
+    Console.WriteLine("--- VEHÍCULOS ---");
+
+    foreach (Vehiculo vehiculo in vehiculos)
+    {
+        Console.WriteLine(
+            vehiculo.Codigo + " - " +
+            vehiculo.Marca + " " +
+            vehiculo.Modelo + " - " +
+            vehiculo.Estado);
+    }
+
+    Console.Write("Seleccione el código del vehículo: ");
+    int codigoVehiculo = int.Parse(Console.ReadLine());
+
+    Vehiculo vehiculoSeleccionado =
+        vehiculos.Find(v => v.Codigo == codigoVehiculo);
+
+    if (vehiculoSeleccionado == null)
+    {
+        Console.WriteLine("Vehículo no encontrado.");
+        Console.ReadLine();
+        return;
+    }
+
+    if (vehiculoSeleccionado.Estado != "Disponible")
+    {
+        Console.WriteLine("El vehículo no está disponible.");
+        Console.ReadLine();
+        return;
+    }
+
+    if (!vehiculoSeleccionado.PuedeTransportar(paqueteSeleccionado.Peso))
+    {
+        Console.WriteLine("El vehículo no tiene capacidad suficiente.");
+        Console.ReadLine();
+        return;
+    }
+
+    Console.Write("Distancia del recorrido en km: ");
+    double distancia = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("--- TIPO DE SERVICIO ---");
+    Console.WriteLine("1. Normal \n2. Prioritario \n3. Urgente \nSeleccione: ");
+    int opcionServicio = int.Parse(Console.ReadLine());
+
+    string tipoServicio;
+
+    switch (opcionServicio)
+    {
+        case 1:
+            tipoServicio = "Normal";
+            break;
+
+        case 2:
+            tipoServicio = "Prioritario";
+            break;
+
+        case 3:
+            tipoServicio = "Urgente";
+            break;
+
+        default:
+            Console.WriteLine("Tipo de servicio inválido.");
+            Console.ReadLine();
+            return;
+    }
+
+    Entrega nuevaEntrega = new Entrega(
+        codigo,
+        clienteSeleccionado,
+        paqueteSeleccionado,
+        repartidorSeleccionado,
+        vehiculoSeleccionado,
+        paqueteSeleccionado.DireccionOrigen,
+        paqueteSeleccionado.DireccionDestino,
+        distancia,
+        tipoServicio
+    );
+
+    entregas.Add(nuevaEntrega);
+
+    repartidorSeleccionado.Estado = "Ocupado";
+    vehiculoSeleccionado.Estado = "Ocupado";
+    paqueteSeleccionado.Estado = "En tránsito";
+
+    Console.WriteLine("\n======================================");
+    Console.WriteLine("      ENTREGA REGISTRADA");
+    Console.WriteLine("======================================");
+
+    nuevaEntrega.MostrarInformacion();
+
     Console.WriteLine("\nPresione ENTER para continuar...");
+    Console.ReadLine();
+}
+void ConsultarEntregas()
+{
+    Console.Clear();
+
+    Console.WriteLine("======================================");
+    Console.WriteLine("        CONSULTAR ENTREGAS");
+    Console.WriteLine("======================================");
+
+    if (entregas.Count == 0)
+    {
+        Console.WriteLine("No hay entregas registradas.");
+    }
+    else
+    {
+        foreach (Entrega entrega in entregas)
+        {
+            Console.WriteLine("--------------------------------------");
+            entrega.MostrarInformacion();
+        }
+
+        Console.WriteLine("--------------------------------------");
+        Console.WriteLine("Total de entregas: " + entregas.Count);
+    }
+
+    Console.WriteLine("Presione ENTER para continuar...");
     Console.ReadLine();
 }
