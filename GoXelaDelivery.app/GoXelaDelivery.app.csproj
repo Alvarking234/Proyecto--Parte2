@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\bicicleta\bicicleta\bicicleta.csproj" />
     <ProjectReference Include="..\Cliente\Cliente.csproj" />
+    <ProjectReference Include="..\documento\documento\documento.csproj" />
     <ProjectReference Include="..\Motoclicleta\Motoclicleta\Motoclicleta.csproj" />
     <ProjectReference Include="..\PaqueteEstandar\PaqueteEstandar\PaqueteEstandar.csproj" />
     <ProjectReference Include="..\Paqueterefrigerado\Paqueterefrigerado\Paqueterefrigerado.csproj" />

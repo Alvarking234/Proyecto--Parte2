@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="bicicleta/bicicleta/bicicleta.csproj" />
   <Project Path="Cliente/Cliente.csproj" />
+  <Project Path="documento/documento/documento.csproj" />
   <Project Path="GoXelaDelivery.app/GoXelaDelivery.app.csproj" Id="718c96d7-c71b-49c3-af5b-403a1c12451f" />
   <Project Path="Motoclicleta/Motoclicleta/Motoclicleta.csproj" />
   <Project Path="Paquete/Paquete/Paquete.csproj" />
