@@ -1,3 +1,13 @@
 <Solution>
+  <Project Path="bicicleta/bicicleta/bicicleta.csproj" />
   <Project Path="Cliente/Cliente.csproj" />
+  <Project Path="GoXelaDelivery.app/GoXelaDelivery.app.csproj" Id="718c96d7-c71b-49c3-af5b-403a1c12451f" />
+  <Project Path="Motoclicleta/Motoclicleta/Motoclicleta.csproj" />
+  <Project Path="Paquete/Paquete/Paquete.csproj" />
+  <Project Path="PaqueteEstandar/PaqueteEstandar/PaqueteEstandar.csproj" />
+  <Project Path="Paqueterefrigerado/Paqueterefrigerado/Paqueterefrigerado.csproj" />
+  <Project Path="PaquteFragil/PaquteFragil/PaquteFragil.csproj" />
+  <Project Path="Repartidor/Repartidor/Repartidor.csproj" />
+  <Project Path="Vehiculo/Vehiculo/Vehiculo.csproj" />
+  <Project Path="Vehiculo2/Vehiculo2/Vehiculo2.csproj" />
 </Solution>

@@ -81,6 +81,6 @@
         Console.WriteLine("Modelo: " + Modelo);
         Console.WriteLine("Capacidad: " + Capacidad + " kg");
         Console.WriteLine("Estado: " + Estado);
-        Console.WriteLine("Costo operativo + CostoOperativo);
+        Console.WriteLine("Costo operativo" + CostoOperativo);
     }
 }

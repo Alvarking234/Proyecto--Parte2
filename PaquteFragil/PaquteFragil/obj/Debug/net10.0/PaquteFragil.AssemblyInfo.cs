@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaquteFragil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dd2b763e7fdd0a3c128cfd73eb1b87904b2f7f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaquteFragil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaquteFragil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

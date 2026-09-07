@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zIuDQiZ/h8U=",
+  "dgSpecHash": "srBnmSmRv8M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\OneDrive\\Escritorio\\proye\\bicicleta\\bicicleta\\bicicleta.csproj",
+  "projectFilePath": "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\bicicleta\\bicicleta\\bicicleta.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.24.2-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.24.2-preview.1.nupkg.sha512"
+    "C:\\Users\\Luis Castillo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.24.2-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.24.2-preview.1.nupkg.sha512"
   ],
   "logs": []
 }

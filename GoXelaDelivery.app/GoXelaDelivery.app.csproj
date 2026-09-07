@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bicicleta\bicicleta\bicicleta.csproj" />
+    <ProjectReference Include="..\Cliente\Cliente.csproj" />
+    <ProjectReference Include="..\Motoclicleta\Motoclicleta\Motoclicleta.csproj" />
+    <ProjectReference Include="..\PaqueteEstandar\PaqueteEstandar\PaqueteEstandar.csproj" />
+    <ProjectReference Include="..\Paqueterefrigerado\Paqueterefrigerado\Paqueterefrigerado.csproj" />
+    <ProjectReference Include="..\Paquete\Paquete\Paquete.csproj" />
+    <ProjectReference Include="..\PaquteFragil\PaquteFragil\PaquteFragil.csproj" />
+    <ProjectReference Include="..\Repartidor\Repartidor\Repartidor.csproj" />
+    <ProjectReference Include="..\Vehiculo2\Vehiculo2\Vehiculo2.csproj" />
+    <ProjectReference Include="..\Vehiculo\Vehiculo\Vehiculo.csproj" />
+  </ItemGroup>
+
+</Project>

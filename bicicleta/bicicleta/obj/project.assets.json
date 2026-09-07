@@ -8,6 +8,16 @@
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
         }
+      },
+      "Vehiculo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Vehiculo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vehiculo.dll": {}
+        }
       }
     }
   },
@@ -91,31 +101,37 @@
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
       ]
+    },
+    "Vehiculo/1.0.0": {
+      "type": "project",
+      "path": "../../Vehiculo/Vehiculo/Vehiculo.csproj",
+      "msbuildProject": "../../Vehiculo/Vehiculo/Vehiculo.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.24.2-preview.1"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.24.2-preview.1",
+      "Vehiculo >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\Luis Castillo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Escritorio\\proye\\bicicleta\\bicicleta\\bicicleta.csproj",
+      "projectUniqueName": "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\bicicleta\\bicicleta\\bicicleta.csproj",
       "projectName": "bicicleta",
-      "projectPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\proye\\bicicleta\\bicicleta\\bicicleta.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\proye\\bicicleta\\bicicleta\\obj\\",
+      "projectPath": "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\bicicleta\\bicicleta\\bicicleta.csproj",
+      "packagesPath": "C:\\Users\\Luis Castillo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\bicicleta\\bicicleta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Luis Castillo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -131,7 +147,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\Vehiculo\\Vehiculo\\Vehiculo.csproj": {
+              "projectPath": "C:\\Users\\Luis Castillo\\downloads\\source\\repos\\Proyecto--Parte2\\Vehiculo\\Vehiculo\\Vehiculo.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
